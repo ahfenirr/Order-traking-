@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <h3>Categories</h3>
+    <ul id="categories">
+      <li data-category="all" class="selected">All</li>
+      <li data-category="clothing">Clothing</li>
+      <li data-category="accessories">Accessories</li>
+      <li data-category="electronics">Electronics</li>
+      <li data-category="other">Other</li>
+    </ul>
+  </aside>
+
+  <div class="container">
+    <h2>Order Tracker</h2>
+
+    <div class="form-group">
+      <label for="picture">Upload Picture</label>
+      <input type="file" id="picture" accept="image/*">
+    </div>
+
+    <div class="form-group">
+      <label for="size">Size</label>
+      <input type="text" id="size" placeholder="Enter size">
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" placeholder="Enter quantity">
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="clothing">Clothing</option>
+        <option value="accessories">Accessories</option>
+        <option value="electronics">Electronics</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <button id="saveOrder">Save Order</button>
+
+    <div class="order-list">
+      <h3>Saved Orders</h3>
+      <input type="text" id="search" class="search" placeholder="Search by code or size">
+      <div id="orders"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
